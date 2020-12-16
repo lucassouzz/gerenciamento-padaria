@@ -1,0 +1,69 @@
+<script src="../js/usuario.js"></script>
+
+<h2>Registro de usuário</h2>
+
+<form name="frmAddUsuario" id="addUsuario" class="frmInserir">
+	<fieldset>
+
+		<legend>Cadastrar novo usuário</legend>
+
+		<table>
+
+			<tr>
+				<th>E-mail</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<th>Senha</th>
+				<td><input type="password" name="senha"></td>
+			</tr>
+			<tr>
+				<th>Repetir senha</th>
+				<td><input type="password" name="repetirSenha"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button type="button" onclick="LAPADOCCA.usuario.cadastrar()">Cadastrar</button>
+					<button type="reset">Limpar</button>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+
+<h3>Usuários cadastrados</h3>
+
+<form id="filtraUsuario" class="frmFiltrar">
+
+	<fieldset>
+		<legend>Filtrar</legend>
+		<input type="text" name="txtbusca" id="campoBuscaUsuario"
+			placeholder="Pesquise por e-mail">
+		<button type="button" onclick="LAPADOCCA.usuario.buscar()">Buscar</button>
+	</fieldset>
+
+</form>
+
+
+<div id="listaUsuarios" class="listaRegistros">
+
+</div>
+<div id="modalEditaUsuario" class="modalEditar">
+	<form name="frmEditaUsuario" id="editaUsuario" class="frmEditar">
+		<table>
+		<tr>
+				
+				<th>E-mail</th>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<th>Senha</th>
+				<td><input type="password" name="senha"></td>
+			</tr>
+			
+		</table>
+
+		<input type="hidden" name="idusuario">
+
+	</form>
+</div>

@@ -1,0 +1,87 @@
+<script src="../js/produto.js"></script>
+
+
+<h2>Registro de produtos</h2>
+
+<form name="frmAddProduto" id="addProduto" class="frmInserir">
+	<fieldset>
+
+		<legend>Novo Produto</legend>
+		<table>
+
+			<tr>
+				<th>Categoria</th>
+				<td><select name="idcategoria" id="selCategoria">
+						<option value="" class="buscando">Aguarde, buscando
+							categorias..</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>Descrição</th>
+				<td><input type="text" name="descricao"></td>
+			</tr>
+			<tr>
+				<th>Quantidade</th>
+				<td><input type="text" name="quantidade"></td>
+			</tr>
+			<tr>
+				<th>Preço (R$)</th>
+				<td><input type="text" name="preco"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button type="button" onclick="LAPADOCCA.produto.cadastrar()">Cadastrar</button>
+					<button type="reset">Limpar</button>
+				</td>
+			</tr>
+		</table>
+
+	</fieldset>
+</form>
+
+
+<h3>Produtos Registrados</h3>
+
+<form id="filtraProduto" class="frmFiltrar">
+
+	<fieldset>
+		<legend>Filtrar</legend>
+		<input type="text" name="txtbusca" id="campoBuscaProduto"
+			placeholder="Pesquise por produto">
+		<button type="button" onclick="LAPADOCCA.produto.buscar()">Buscar</button>
+	</fieldset>
+
+</form>
+
+<div id="listaProdutos" class="listaRegistros"></div>
+
+<div id="modalEditaProduto" class="modalEditar">
+	<form name="frmEditaProduto" id="editaProduto" class="frmEditar">
+		<table>
+		<tr>
+				<th>Categoria</th>
+				<td>
+					<select name="idcategoria" id="selCategoriaEdicao">
+						<option value="" class="buscando">Aguarde, buscando categoria...</option>
+ 					</select>
+				</td>
+			</tr>	
+			<tr>
+				<th>Descrição</th>
+				<td><input type="text" name="descricao"></td>
+			</tr>
+			<tr>
+				<th>Quantidade</th>
+				<td><input type="text" name="quantidade"></td>
+			</tr>
+			<tr>
+				<th>Preço</th>
+				<td><input type="text" name="preco"></td>
+			</tr>
+
+		</table>
+
+		<input type="hidden" name="idproduto">
+
+	</form>
+</div>

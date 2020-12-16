@@ -1,0 +1,61 @@
+<script src="../js/categoria.js"></script>
+
+<h2>Registrar nova categoria</h2>
+
+<form name="frmAddCategoria" id="addCategoria" class="frmInserir">
+	<fieldset>
+
+		<legend>Nova Categoria</legend>
+		<table>
+			<tr>
+				<th>Categoria</th>
+				<td>
+				<td><input type="text" name="descricao"></td>
+			</tr>
+
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>
+					<button type="reset">Limpar</button>
+					<button type="button" onclick="LAPADOCCA.categoria.cadastrar()">Cadastrar</button>
+				</td>
+			</tr>
+		</table>
+
+	</fieldset>
+</form>
+
+<!-- Aqui vai a cria��o da busca -->
+
+<h3>Categorias Registradas</h3>
+
+<form id="filtraCategoria" class="frmFiltrar">
+
+	<fieldset>
+		<legend>Filtrar</legend>
+		<input type="text" name="txtbusca" id="campoBuscaCategoria"
+			placeholder="Pesquise pela categoria">
+		<button type="button" onclick="LAPADOCCA.categoria.buscar()">Buscar</button>
+	</fieldset>
+
+</form>
+<div id="listaCategorias" class="listaRegistros"></div>
+
+
+<div id="modalEditaCategoria" class="modalEditar">
+
+	<form name="frmEditaCategoria" id="editaCategoria" class="frmEditar">
+		<table>
+
+			<tr>
+				<th>Descricao</th>
+				<td><input type="text" name="descricao"></td>
+			</tr>
+		</table>
+
+		<input type="hidden" name="idcategoria">
+
+	</form>
+
+</div>

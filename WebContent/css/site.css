@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/*GERAL*/
+body, html {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #C0B283;
+}
+
+/* Login*/
+.login img {
+	width: 120px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+/*Menu e Header*/
+.item-menu {
+	cursor: pointer;
+	margin: 0px 20px;
+	border: solid #000 1px;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+.item-menu img {
+	width: 40px;
+}
+
+.main-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px 10px;
+	background-color: #C0B283;
+}
+
+.main-header nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.logo {
+	width: 78px;
+	justify-self: start;
+}
+
+.img_esquerda {
+	width: 400px;
+	position: absolute;
+	margin-left: 5%;
+	margin-top: 10%;
+}
+
+.img_direita {
+	width: 400px;
+	position: absolute;
+	margin-left: 65%;
+	margin-top: 10%;
+}
+/*** Section ***/
+section{
+	height: 100vh;
+}
+
+/***Texto de boas vindas***/
+h4, h5 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #8C5D2F;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 100px;
+}
+/***Formularios***/
+fieldset {
+	border-radius: 20px;
+}
+
+.frmInserir {
+	width: 350px;
+	margin: auto;
+}
+
+.frmFiltrar {
+	width: 350px;
+	margin: auto;
+}
+
+input {
+	border-radius: 20px;
+}
+
+button {
+	border-radius: 20px;
+}
+
+select {
+	border-radius: 20px;
+}
+/*** Titulos ***/
+h1, h2, h3 {
+	text-align: center;
+	color: #8C5D2F;
+}
+
+/***	Modais ***/
+#modalAviso, #modalConfirmacao, .modalEditar {
+	display: none;
+}
+
+a img {
+	width: 20px;
+}
+
+/**       Tabelas		**/
+table {
+	margin: auto;
+	text-align: center;
+	padding: 10px;
+	/*margin-bottom: 10px;*/
+	
+}
+
+.listaRegistros {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.listaRegistros td, .listaRegistros th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	border-radius: 20px;
+}
+
+.listaRegistros tr:nth-child(even) {
+	background-color: #C0B283;
+}
+
+.listaRegistros tr:hover {
+	background-color: #ddd;
+}
+
+.listaRegistros th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #8C5D2F;
+}
+
+/**       Rodapé     **/      
+footer {
+	border-top: 1px solid #333;
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+	text-align: center;
+	/*position:absolute;*/
+}
+
