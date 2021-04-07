@@ -184,7 +184,7 @@ $(document)
 										document.frmEditaCategoria.descricao.value = categoria.descricao;
 
 										var modalEditaCategoria = {
-											tittle : "Editar Categoria",
+											title : "Editar Categoria",
 											height : 200,
 											width : 550,
 											modal : true,

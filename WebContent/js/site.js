@@ -3,9 +3,10 @@ LAPADOCCA = new Object();
 $(document)
 		.ready(
 				function() {
+					
 
 					LAPADOCCA.PATH = "/laPadocca-PI/rest/";
-
+					
 					$("header").load("/laPadocca-PI/pages/geral/header.html");
 					$("footer").load("/laPadocca-PI/pages/geral/footer.html");
 
@@ -18,7 +19,7 @@ $(document)
 						// dela
 
 						$("section").empty();
-						
+
 						$("section")
 								.load(
 										pagename + "/",
@@ -55,7 +56,8 @@ $(document)
 								/(\d)(?=(\d{3})+\,)/g, "$1.");
 					}
 
-					LAPADOCCA.exibirConfirmacao = function(mensagem, aoConfirmar) {
+					LAPADOCCA.exibirConfirmacao = function(mensagem,
+							aoConfirmar) {
 						var modal = {
 							title : "Confirmar exclusão:",
 							height : 200,
@@ -66,14 +68,42 @@ $(document)
 									$(this).dialog("close");
 									aoConfirmar();
 								},
-								"Cancelar": function(){
+								"Cancelar" : function() {
 									$(this).dialog("close");
-									
+
 								}
 							}
 						};
 						$("#modalConfirmacao").html(mensagem);
 						$("#modalConfirmacao").dialog(modal);
 					}
-			
+					
+//					LAPADOCCA.valida = function() {
+//						
+//						var autentica = new Object();
+//
+//						autentica.email = document.frmLogin.txtemail.value;
+//						autentica.senha = document.frmLogin.txtsenha.value;
+//						
+//						if (autentica.email==null || autentica.senha == null) {
+//							alert("tem alguma coisa errada irmão")
+//						}else {
+//							$.ajax({
+//								type: "GET",
+//								url: LAPADOCCA.PATH + "teste",
+//								data: JSON.stringify(autentica),
+//								success: function(dados){
+//									console.log(dados)
+//								},
+//								error: function(info){
+//									LAPADOCCA
+//									.exibirAviso("Erro deu ruim: "
+//											+ info.status
+//											+ " - "
+//											+ info.statusText);
+//								}
+//							})
+//						}
+//					}
+
 				});// FIM

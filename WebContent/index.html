@@ -6,10 +6,19 @@
 <meta name="keywords" content="laPadocca, Padaria, Pães">
 <meta name="author" content="Lucas de Souza">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <title>LaPadocca</title>
 <!-- <link rel="stylesheet" type="text/css" href="css/site.css"> -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+
+<script src="js/autentica.js"></script>
+<!--<script src="js/site.js"></script>-->
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/site.css">
+
 
 </head>
 <body>
@@ -20,22 +29,22 @@
 		</div>
 	</header>
 
-	<form name="frmLogin" method="post" action="#" onsubmit="return validaLogin()">
+	<form name="frmLogin" action="autenticar" method="POST" onsubmit="return cod64()">
 
 		<table>
 			<tr>
-				<td><input type="text" name="txtemail" id="email"
+				<td><input type="text" name="txtemail" 
 					placeholder="E-mail"></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="txtsenha" id="senha"
+				<td><input type="password" name="txtsenha"
 					placeholder="Senha"></td>
 			</tr>
 			<tr>
 				<td>
-					<button type=" " id="recuperarSenha">Recuperar senha</button>
+					<button type="reset" id="recuperarSenha">Recuperar senha</button>
 					<!-- <button type="submit" id="entrar">Entrar</button> -->
-					<a href="pages/index.html">Entrar</a>
+					<button type="submit">Entrar</button>
 				</td>
 			</tr>
 

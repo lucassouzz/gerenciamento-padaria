@@ -154,7 +154,7 @@ $(document)
 									success : function(dados) {
 
 										dados = JSON.parse(dados);
-
+										console.log(dados)
 										$("#listaProdutos")
 												.html(
 														LAPADOCCA.produto

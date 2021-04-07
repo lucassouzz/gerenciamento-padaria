@@ -1,14 +1,69 @@
+<script src="../js/vendas.js"></script>
+
 <h2>Realizar o registro de venda:</h2>
 
+
 <form name="frmRegVenda" id="regVenda" class="frmInserir">
+	<div style="text-align: center;">
+		<button type="button" onclick="LAPADOCCA.vendas.exibirPopup()">Adicionar
+			Item</button>
+		<button style="margin-left: 55px;">Concluir</button>
+
+	</div>
 	<fieldset>
-		<legend>Informe os produtos vendidos</legend>
+		<fieldset>
+			<div>
+				<output id="data"
+					style="font-family: 'arial black', 'avant garde'; font-size: 14px;"></output>
+
+				<output id="hora"
+					style="font-family: 'arial black', 'avant garde'; font-size: 14px;"></output>
+			</div>
+		</fieldset>
+		<fieldset>
+			<a
+				style="font-family: 'arial black', 'avant garde'; font-size: 14px;">Usuario:
+				Silvio</a>
+		</fieldset>
+
+		<div id="VHP" class="listaRegistros"></div>
+
+	</fieldset>
+
+	<div style="text-align: center;">
+		<button>Limpar</button>
+		<button style="margin-left: 55px;">Registrar</button>
+	</div>
+</form>
+
+
+
+
+
+<div id="modalNewRegistro" class="modalEditar">
+	<form name="frmInserirVenda" id="inserirVenda" class="frmEditar">
 		<table>
 			<tr>
-				<td><select name="idvenda" id="selProduto">
-				<option value=""></option>
-				
-				</select>
+				<th>Produto:</th>
+				<td><select name="idproduto" id="selProduto"
+					onchange="LAPADOCCA.vendas.newTest()">
+						<option value="" class="buscando">Aguarde, buscando
+							produtos.</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>Quantidade:</th>
+				<td><input type="number" id="qnt" class="quantidade"
+					style="width: 50px;"></td>
+			</tr>
+			<tr>
+				<th>Saldo disponível:</th>
+				<td><input id="qntDisponivel" style="width: 50px;"></td>
+			</tr>
+			<tr>
+				<th>Valor:</th>
+				<td><input name="preco" id="precoProd"></td>
+			</tr>
 		</table>
-	</fieldset>
-</form>
+	</form>
+</div>
