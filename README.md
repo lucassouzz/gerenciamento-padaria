@@ -19,3 +19,5 @@ Tela de cadastro e controle de produtos.
 Tela de geração de relatórios.
 ![image](https://user-images.githubusercontent.com/53841323/171527194-4c7bd21d-c885-4869-aec7-a231daabeab9.png)
 
+Tela de realização de vendas.
+![image](https://user-images.githubusercontent.com/53841323/171527735-95c3ee38-3f00-4ac2-a14c-59af88b0a37a.png)
